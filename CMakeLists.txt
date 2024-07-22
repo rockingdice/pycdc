@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Debug options.
-option(ENABLE_BLOCK_DEBUG "Enable block debugging" OFF)
-option(ENABLE_STACK_DEBUG "Enable stack debugging" OFF)
+option(ENABLE_BLOCK_DEBUG "Enable block debugging" ON)
+option(ENABLE_STACK_DEBUG "Enable stack debugging" ON)
 
 # Turn debug defs on if they're enabled.
 if (ENABLE_BLOCK_DEBUG)
@@ -61,6 +61,7 @@ add_library(pycxx STATIC
     bytes/python_3_10.cpp
     bytes/python_3_11.cpp
     bytes/python_3_12.cpp
+    bytes/python_3_20.cpp
 )
 
 add_executable(pycdas pycdas.cpp)
